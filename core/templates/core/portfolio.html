@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Portofolio - {{ info.company_name }}{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Portofolio Kami</h1>
+    <p>Lihat proyek-proyek kreatif kami yang telah selesai.</p>
+</section>
+
+<section class="flex-grid">
+    {% for item in portfolios %}
+    <div class="card">
+        <img src="{{ item.image.url }}" alt="{{ item.title }}">
+        <h4>{{ item.title }}</h4>
+        <p>{{ item.description }}</p>
+    </div>
+    {% empty %}
+    <p>Belum ada portofolio untuk ditampilkan.</p>
+    {% endfor %}
+</section>
+{% endblock %}

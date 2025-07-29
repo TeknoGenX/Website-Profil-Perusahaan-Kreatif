@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Kontak - {{ info.company_name }}{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Kontak Kami</h1>
+    <p>Hubungi kami untuk informasi lebih lanjut.</p>
+</section>
+
+<section style="padding: 40px 20px; text-align: center;">
+    <p><strong>Alamat:</strong> {{ info.address }}</p>
+    <p><strong>Email:</strong> <a href="mailto:{{ info.email }}">{{ info.email }}</a></p>
+    <p><strong>Telepon:</strong> <a href="tel:{{ info.phone }}">{{ info.phone }}</a></p>
+    <div style="margin-top: 20px;">
+        {{ info.map_embed|safe }}
+    </div>
+</section>
+{% endblock %}

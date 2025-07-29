@@ -1,0 +1,10 @@
+# Website Profil Perusahaan Kreatif
+
+Website profil perusahaan kreatif berbasis Django. Fitur utama:
+- Manajemen layanan, portofolio, testimoni
+- Panel admin untuk konten
+- Tampilan frontend estetis dan responsif
+
+## Jalankan
+```bash
+python manage.py runserver

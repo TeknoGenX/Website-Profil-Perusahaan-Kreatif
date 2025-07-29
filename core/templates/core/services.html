@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Layanan - {{ info.company_name }}{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Layanan Kami</h1>
+</section>
+
+<section class="flex-grid">
+    {% for service in services %}
+    <div class="card">
+        <div style="font-size: 32px;">{{ service.icon }}</div>
+        <h3>{{ service.title }}</h3>
+        <p>{{ service.description }}</p>
+    </div>
+    {% empty %}
+    <p>Tidak ada layanan yang tersedia saat ini.</p>
+    {% endfor %}
+</section>
+{% endblock %}

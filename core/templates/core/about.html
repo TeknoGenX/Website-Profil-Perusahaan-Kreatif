@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Tentang Kami - {{ info.company_name }}{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Tentang Kami</h1>
+    <p>{{ info.about }}</p>
+</section>
+
+<section style="padding: 40px 20px;">
+    <h2>Profil Perusahaan</h2>
+    <p>{{ info.company_name }} berkomitmen menciptakan solusi desain dan teknologi yang unik dan berdampak.</p>
+</section>
+{% endblock %}

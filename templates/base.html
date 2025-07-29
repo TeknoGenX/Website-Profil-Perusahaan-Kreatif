@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Profil Perusahaan{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'core/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <header>
+        <h1>{{ info.company_name }}</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/tentang/">Tentang</a>
+            <a href="/layanan/">Layanan</a>
+            <a href="/portofolio/">Portofolio</a>
+            <a href="/tim/">Tim</a>
+            <a href="/kontak/">Kontak</a>
+        </nav>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <p>&copy; {{ info.company_name }}</p>
+    </footer>
+</body>
+</html>
